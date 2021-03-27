@@ -1,0 +1,28 @@
+function myFunction() {
+  var countNegative=0;
+  var countPositive=0;
+  var number = document.getElementById("numbers").value;
+  var items=[];
+  items.push(number);  
+  var itemsString=items.toString();
+  var numbers=itemsString.slice("");
+  var total=0;
+
+for (var i=0;i<numbers.length;i++){
+        if (numbers[i]>0){
+            countPositive++;
+            total =countPositive-countNegative;
+        } 
+        if (numbers[i]=="-"){
+            countNegative++;
+        }
+        if (isNaN(numbers[i])&&numbers[i]!="-"){
+            alert(numbers[i]+" is not a number, please enter numbers")
+        } 
+        if(numbers[i]==0){
+            alert("Positive numbers: "+total+"  Negative numbers: "+countNegative);
+        }
+       else{
+       }
+    }
+}
